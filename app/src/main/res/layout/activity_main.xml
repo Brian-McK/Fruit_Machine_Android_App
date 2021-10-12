@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/spin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginEnd="166dp"
+        android:text="Spin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="259dp" />
+
+    <ImageView
+        android:id="@+id/slot_view_1"
+        android:layout_width="89dp"
+        android:layout_height="97dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="126dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/slot_view_2"
+        android:layout_width="89dp"
+        android:layout_height="97dp"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="126dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/slot_view_3"
+        android:layout_width="89dp"
+        android:layout_height="97dp"
+        tools:ignore="ImageContrastCheck"
+        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteY="126dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/win_lose_view"
+        android:layout_width="144dp"
+        android:layout_height="110dp"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="340dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/spins_since_last_win_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spins since last win"
+        android:textAlignment="viewStart"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="511dp" />
+
+    <TextView
+        android:id="@+id/win_spin_ratio_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Win / Spin Ratio"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="616dp" />
+
+    <TextView
+        android:id="@+id/total_spins_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Spins"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="545dp" />
+
+    <TextView
+        android:id="@+id/total_wins_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Wins"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="580dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
