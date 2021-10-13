@@ -7,22 +7,22 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/spin_button"
+        android:id="@+id/spinButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
         android:layout_marginEnd="161dp"
         android:layout_marginBottom="52dp"
-        android:text="Spin"
+        android:text="@string/spin"
         android:textSize="34sp"
         app:backgroundTint="#E91E63"
-        app:layout_constraintBottom_toTopOf="@+id/elevated_card_view"
+        app:layout_constraintBottom_toTopOf="@+id/elevatedCardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/elevated_card_view"
+        android:id="@+id/elevatedCardView"
         android:layout_width="400dp"
         android:layout_height="200dp"
         android:layout_margin="10dp"
@@ -44,60 +44,60 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/spins_since_last_win_text"
+                android:id="@+id/spinsSinceLastWinText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:text="Spins since last win"
+                android:text="@string/spins_since_last_win"
                 android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
-                app:layout_constraintBottom_toTopOf="@+id/win_spin_ratio_text"
+                app:layout_constraintBottom_toTopOf="@+id/winSpinRatioText"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/win_spin_ratio_text"
+                android:id="@+id/winSpinRatioText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:text="Win / Spin Ratio"
+                android:text="@string/win_spin_ratio"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
-                app:layout_constraintBottom_toTopOf="@+id/total_spins_text"
+                app:layout_constraintBottom_toTopOf="@+id/totalSpinsText"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spins_since_last_win_text" />
+                app:layout_constraintTop_toBottomOf="@+id/spinsSinceLastWinText" />
 
             <TextView
-                android:id="@+id/total_spins_text"
+                android:id="@+id/totalSpinsText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:text="Total Spins"
+                android:text="@string/total_spins"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
-                app:layout_constraintBottom_toTopOf="@+id/total_wins_text"
+                app:layout_constraintBottom_toTopOf="@+id/totalWinsText"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/win_spin_ratio_text" />
+                app:layout_constraintTop_toBottomOf="@+id/winSpinRatioText" />
 
             <TextView
-                android:id="@+id/total_wins_text"
+                android:id="@+id/totalWinsText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:text="Total Wins"
+                android:text="@string/total_wins"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/total_spins_text" />
+                app:layout_constraintTop_toBottomOf="@+id/totalSpinsText" />
 
             <TextView
-                android:id="@+id/spins_since_last_win_result"
+                android:id="@+id/spinsSinceLastWinResult"
                 android:layout_width="65dp"
                 android:layout_height="27dp"
                 android:layout_marginTop="8dp"
@@ -108,14 +108,14 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
-                app:layout_constraintBottom_toTopOf="@+id/spins_since_last_win_result3"
+                app:layout_constraintBottom_toTopOf="@+id/winSpinRatioResult"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/spins_since_last_win_text"
+                app:layout_constraintStart_toEndOf="@+id/spinsSinceLastWinText"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/spins_since_last_win_result3"
+                android:id="@+id/winSpinRatioResult"
                 android:layout_width="65dp"
                 android:layout_height="27dp"
                 android:layout_marginBottom="8dp"
@@ -125,14 +125,14 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
-                app:layout_constraintBottom_toTopOf="@+id/spins_since_last_win_result4"
+                app:layout_constraintBottom_toTopOf="@+id/totalSpinsResult"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.623"
-                app:layout_constraintStart_toEndOf="@+id/win_spin_ratio_text"
-                app:layout_constraintTop_toBottomOf="@+id/spins_since_last_win_result" />
+                app:layout_constraintStart_toEndOf="@+id/winSpinRatioText"
+                app:layout_constraintTop_toBottomOf="@+id/spinsSinceLastWinResult" />
 
             <TextView
-                android:id="@+id/spins_since_last_win_result4"
+                android:id="@+id/totalSpinsResult"
                 android:layout_width="65dp"
                 android:layout_height="27dp"
                 android:layout_marginBottom="7dp"
@@ -142,14 +142,14 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
-                app:layout_constraintBottom_toTopOf="@+id/spins_since_last_win_result5"
+                app:layout_constraintBottom_toTopOf="@+id/totalWinsResult"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.712"
-                app:layout_constraintStart_toEndOf="@+id/total_spins_text"
-                app:layout_constraintTop_toBottomOf="@+id/spins_since_last_win_result3" />
+                app:layout_constraintStart_toEndOf="@+id/totalSpinsText"
+                app:layout_constraintTop_toBottomOf="@+id/winSpinRatioResult" />
 
             <TextView
-                android:id="@+id/spins_since_last_win_result5"
+                android:id="@+id/totalWinsResult"
                 android:layout_width="65dp"
                 android:layout_height="27dp"
                 android:layout_marginBottom="11dp"
@@ -162,8 +162,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.721"
-                app:layout_constraintStart_toEndOf="@+id/total_wins_text"
-                app:layout_constraintTop_toBottomOf="@+id/spins_since_last_win_result4" />
+                app:layout_constraintStart_toEndOf="@+id/totalWinsText"
+                app:layout_constraintTop_toBottomOf="@+id/totalSpinsResult" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -176,37 +176,40 @@
         android:layout_marginBottom="60dp"
         android:background="#FE0061"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/spin_button"
+        app:layout_constraintBottom_toTopOf="@+id/spinButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/fruit_slot_1"
+            android:id="@+id/fruitSlot1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/image_border"
+            android:contentDescription="slot 1"
             app:srcCompat="@drawable/banana"
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/banana" />
 
         <ImageView
-            android:id="@+id/fruit_slot_2"
+            android:id="@+id/fruitSlot2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/image_border"
+            android:contentDescription="slot 2"
             app:srcCompat="@drawable/banana"
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/banana" />
 
         <ImageView
-            android:id="@+id/fruit_slot_3"
+            android:id="@+id/fruitSlot3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/image_border"
+            android:contentDescription="slot 3"
             app:srcCompat="@drawable/banana"
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/banana" />

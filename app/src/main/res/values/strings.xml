@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Fruit Machine</string>
+    <string name="spin">Spin</string>
+    <string name="spins_since_last_win">Spins since last win</string>
+    <string name="win_spin_ratio">Win / Spin Ratio</string>
+    <string name="total_spins">Total Spins</string>
+    <string name="total_wins">Total Wins</string>
 </resources>
