@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.os.Handler
+import android.os.Looper
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         val fruitSlot2Image: ImageView = findViewById(R.id.fruitSlot2)
         val fruitSlot3Image: ImageView = findViewById(R.id.fruitSlot3)
 
+        // unused
+        val imageRefs = arrayOf(fruitSlot1Image, fruitSlot2Image, fruitSlot3Image)
+
         // get all the textview result texts by id
         val spinsSinceLastWinResult: TextView = findViewById(R.id.spinsSinceLastWinResult)
         val winSpinRatioResult: TextView = findViewById(R.id.winSpinRatioResult)
@@ -27,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         var totalSpinCounter = 0
         var totalWinCounter = 0
         var winRatio: Double
+        var spinSinceLastWinCounter = 0
 
 
         // set onclick listener to the button
@@ -48,24 +54,31 @@ class MainActivity : AppCompatActivity() {
             println("SLOT 1: $spinSlot1")
 
             val spinSlot2 = slot.spin()
-            when (spinSlot2)
-            {
-                1 -> fruitSlot2Image.setImageResource(R.drawable.banana)
-                2 -> fruitSlot2Image.setImageResource(R.drawable.cherry)
-                3 -> fruitSlot2Image.setImageResource(R.drawable.watermelon)
-                4 -> fruitSlot2Image.setImageResource(R.drawable.orange)
-            }
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                when (spinSlot2)
+                {
+                    1 -> fruitSlot2Image.setImageResource(R.drawable.banana)
+                    2 -> fruitSlot2Image.setImageResource(R.drawable.cherry)
+                    3 -> fruitSlot2Image.setImageResource(R.drawable.watermelon)
+                    4 -> fruitSlot2Image.setImageResource(R.drawable.orange)
+                }
+            }, 300)
+
 
             println("SLOT 2: $spinSlot2")
 
             val spinSlot3 = slot.spin()
-            when (spinSlot3)
-            {
-                1 -> fruitSlot3Image.setImageResource(R.drawable.banana)
-                2 -> fruitSlot3Image.setImageResource(R.drawable.cherry)
-                3 -> fruitSlot3Image.setImageResource(R.drawable.watermelon)
-                4 -> fruitSlot3Image.setImageResource(R.drawable.orange)
-            }
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                when (spinSlot3)
+                {
+                    1 -> fruitSlot3Image.setImageResource(R.drawable.banana)
+                    2 -> fruitSlot3Image.setImageResource(R.drawable.cherry)
+                    3 -> fruitSlot3Image.setImageResource(R.drawable.watermelon)
+                    4 -> fruitSlot3Image.setImageResource(R.drawable.orange)
+                }
+            }, 600)
 
             println("SLOT 3: $spinSlot3")
 
@@ -77,11 +90,17 @@ class MainActivity : AppCompatActivity() {
             if(spinSlot1 == spinSlot2 && spinSlot2 == spinSlot3)
             {
                 totalWinCounter++
+                spinSinceLastWinCounter = 0
+            }
+            else {
+                spinSinceLastWinCounter++
             }
             totalWinsResult.text = "$totalWinCounter"
 
             winRatio = (totalWinCounter / totalSpinCounter.toDouble()) * 100
-            winSpinRatioResult.text = "%.2f".format(winRatio)
+            winSpinRatioResult.text = "%.2f%%".format(winRatio)
+
+            spinsSinceLastWinResult.text = "$spinSinceLastWinCounter"
         }
     }
 }
@@ -93,3 +112,12 @@ class Slot(val possibleOutcomes: Int)
         return (1..possibleOutcomes).random()
     }
 }
+
+
+
+
+
+// TODO - FIX IMAGES
+// TODO - MAKE VIDEO
+// TODO - COMMENT PROPERLY
+// TODO - TRY GET SPINNING ANIMATION
