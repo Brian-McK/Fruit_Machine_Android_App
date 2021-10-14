@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         // declare and initialise counter for total number of spins
         var totalSpinCounter = 0
         var totalWinCounter = 0
+        var winRatio: Double
+
 
         // set onclick listener to the button
         spinButton.setOnClickListener {
@@ -77,6 +79,9 @@ class MainActivity : AppCompatActivity() {
                 totalWinCounter++
             }
             totalWinsResult.text = "$totalWinCounter"
+
+            winRatio = (totalWinCounter / totalSpinCounter.toDouble()) * 100
+            winSpinRatioResult.text = "%.2f".format(winRatio)
         }
     }
 }
