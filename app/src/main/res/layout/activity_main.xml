@@ -174,7 +174,7 @@
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_marginBottom="60dp"
-        android:background="#FE0061"
+        android:background="#E91E63"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/spinButton"
         app:layout_constraintEnd_toEndOf="parent"
