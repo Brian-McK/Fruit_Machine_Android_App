@@ -11,15 +11,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="161dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="28dp"
         android:text="@string/spin"
         android:textSize="34sp"
         app:backgroundTint="#E91E63"
         app:layout_constraintBottom_toTopOf="@+id/elevatedCardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winImage" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/elevatedCardView"
@@ -173,11 +175,12 @@
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        android:layout_marginBottom="60dp"
         android:background="#E91E63"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/spinButton"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/winImage"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -185,35 +188,61 @@
             android:id="@+id/fruitSlot1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/image_border"
             android:contentDescription="@string/slot_1"
+            android:padding="10dp"
             app:srcCompat="@drawable/banana"
             tools:ignore="ImageContrastCheck"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="52dp"
             tools:srcCompat="@drawable/banana" />
 
         <ImageView
             android:id="@+id/fruitSlot2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/image_border"
             android:contentDescription="@string/slot_2"
+            android:padding="10dp"
             app:srcCompat="@drawable/banana"
             tools:ignore="ImageContrastCheck"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="52dp"
             tools:srcCompat="@drawable/banana" />
 
         <ImageView
             android:id="@+id/fruitSlot3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/image_border"
             android:contentDescription="@string/slot_3"
+            android:padding="10dp"
             app:srcCompat="@drawable/banana"
             tools:ignore="ImageContrastCheck"
+            tools:layout_editor_absoluteX="281dp"
+            tools:layout_editor_absoluteY="52dp"
             tools:srcCompat="@drawable/banana" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/winImage"
+        android:layout_width="293dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="59dp"
+        app:layout_constraintBottom_toTopOf="@+id/spinButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:srcCompat="@drawable/win"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
