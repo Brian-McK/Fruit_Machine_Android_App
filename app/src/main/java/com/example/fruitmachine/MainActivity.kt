@@ -1,5 +1,5 @@
-// Brian McKenna - SDB
-// Github Link:
+// Brian McKenna - SD3B
+// Github Link: https://github.com/Brian-McK/Fruit_Machine_Android_App
 
 package com.example.fruitmachine
 
@@ -14,6 +14,7 @@ import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator.INFINITE
 import android.animation.ValueAnimator.REVERSE
+import android.util.Log
 import android.view.View
 
 
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        Log.d("BMK", "onCreate: Entered")
 
         // create an empty array of type Animator
         val animations: MutableList<Animator> = ArrayList()
@@ -76,6 +79,7 @@ class MainActivity : AppCompatActivity() {
 
                 // trigger function that generates 3 random numbers
                 val spinSlot1 = slot.spin()
+                Log.d("BMK", "Random Number Slot 1: $spinSlot1")
 
                 when (spinSlot1)
                 {
@@ -86,6 +90,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 val spinSlot2 = slot.spin()
+                Log.d("BMK", "Random Number Slot 2: $spinSlot2")
 
                 when (spinSlot2)
                 {
@@ -96,6 +101,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 val spinSlot3 = slot.spin()
+                Log.d("BMK", "Random Number Slot 3: $spinSlot3")
 
                 when (spinSlot3)
                 {
