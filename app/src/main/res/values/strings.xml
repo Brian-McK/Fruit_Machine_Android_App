@@ -5,4 +5,11 @@
     <string name="win_spin_ratio">Win / Spin Ratio</string>
     <string name="total_spins">Total Spins</string>
     <string name="total_wins">Total Wins</string>
+    <string name="winSpinRatioResult">-</string>
+    <string name="spinsSinceLastWinResult">-</string>
+    <string name="totalSpinsResult">-</string>
+    <string name="totalWinsResult">-</string>
+    <string name="slot_1">slot 1</string>
+    <string name="slot_2">slot 2</string>
+    <string name="slot_3">slot 3</string>
 </resources>

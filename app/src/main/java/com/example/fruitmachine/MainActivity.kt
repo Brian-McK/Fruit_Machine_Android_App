@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity() {
         }
             val animatorSet = AnimatorSet()
             animatorSet.playTogether(animations)
-            animatorSet.start()
 
             // get all the textview result texts by id
             val spinsSinceLastWinResult: TextView = findViewById(R.id.spinsSinceLastWinResult)
